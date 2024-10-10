@@ -1,11 +1,21 @@
 {
+  "name": "crypto-tracker-api",
+  "version": "1.0.0",
+  "description": "Cryptocurrency tracker API using CoinGecko and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
   "dependencies": {
     "axios": "^1.7.7",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "mongoose": "^8.7.1",
-    "node-cron": "^3.0.3",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.7"
   }
 }

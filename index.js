@@ -1,6 +1,6 @@
 const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, './process.env') });
-
+const aboutMe = require('./aboutMe')
 const connectToMongo = require("./db");
 const Express = require("express");
 const fetchCryptoData = require('./schedular'); // Correct import syntax
@@ -20,11 +20,10 @@ app.use(Express.json());
 
 const port = process.env.PORT || 5000;
 
-// Available routes
 app.get('/', (req, res) => {
-    console.log("/user request called");
-    res.status(200).send('Welcome to the scraper backend');
+    res.status(200).json(aboutMe);
 });
+
 
 app.use('/api', require('./routes/routes'));
 
